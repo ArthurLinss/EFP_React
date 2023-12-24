@@ -109,32 +109,45 @@ section h2 {
 }
 
 
-
 #music {
   background-color: rgba(255, 255, 255, var(--alpha));
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  max-height: var(--max-height); /* Adjust the value as per your requirement */
-  margin: 20px auto; /* Center the element horizontally */
-  max-width: var(--max-width); /* Adjust the value as per your requirement */
+  max-height: var(--max-height);
+  margin: 20px auto;
+  max-width: var(--max-width);
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  position: relative;
 }
 
 .music-header {
-  padding-bottom: 10px; /* Adjust as needed for spacing */
+  padding-bottom: 10px;
   position: sticky;
   top: 0;
   z-index: 1;
+  background-color: rgba(255, 255, 255, var(--alpha)); /* Adjust as needed */
 }
 
 .music-content {
   overflow-y: auto;
-  padding-top: 10px; /* Adjust as needed for spacing */
+  padding-top: 10px;
   position: relative;
+  flex-grow: 1;
 }
+
+.music-content-footer {
+  overflow-y: auto;
+  padding-top: 10px;
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, var(--alpha)); /* Adjust as needed */
+}
+
+
 
 /* Contact section styles */
 #contact {
@@ -223,6 +236,9 @@ footer p {
 
 
 
+.music-player {
+  margin-top: 20px;
+}
 
 .music-track {
   background-color: #fff;
@@ -232,11 +248,28 @@ footer p {
   margin-bottom: 20px;
 }
 
+
 .music-track h3 {
   font-size: 1.5em;
   margin-bottom: 10px;
   color: #43c6e7; /* Dark green */
 }
+
+
+.music-track.playing{
+  background-color: #cdf0f5; /* Change background color */
+  animation: pulse 0.7s infinite alternate; /* Add animation effect */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.95);
+  }
+}
+
 
 .music-track audio {
   width: 100%;
@@ -247,6 +280,7 @@ footer p {
   display: flex;
   justify-content: center;
   gap: 10px;
+  margin-top: 10px;
 }
 
 .playback-controls button {
@@ -261,7 +295,7 @@ footer p {
 }
 
 .playback-controls button:hover {
-  background-color: var(--main-color); /* Lighter green on hover */
+  background-color: #005d72; /* Darker shade on hover */
 }
 
 

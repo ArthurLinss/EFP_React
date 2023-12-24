@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import TimelineComponent from './components/Gigs';
 import LinkTree from './components/Linktree';
+import SingleMusic from "./components/SingleMusic"
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <main>
         <About />
         <Music />
+        <SingleMusic />
         <Contact />
         <TimelineComponent />
         <LinkTree/>
