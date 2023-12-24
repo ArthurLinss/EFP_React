@@ -5,8 +5,10 @@ import React from 'react';
 const Contact = () => {
   return (
     <section id="contact">
-      <h2>Contact Us</h2>
-      {/* Add contact form or information */}
+      <h2>Contact</h2>
+      <div>
+      E-mail: exitfromparadise@gmail.com
+      </div>
       <form>
         {/* Contact form fields */}
       </form>

@@ -7,6 +7,8 @@ import About from './components/About';
 import Music from './components/Music';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import TimelineComponent from './components/Gigs';
+import LinkTree from './components/Linktree';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <About />
         <Music />
         <Contact />
+        <TimelineComponent />
+        <LinkTree/>
       </main>
       <Footer />
     </div>

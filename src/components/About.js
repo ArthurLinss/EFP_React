@@ -5,8 +5,8 @@ import React from 'react';
 const About = () => {
   return (
     <section id="about">
-      <h2>About Us</h2>
-      <p> Electronic music.
+      <h2>About</h2>
+      <p> Electronic music. No mixing. No mastering.
       </p>
     </section>
   );

@@ -1,30 +1,53 @@
 /* App.css */
+:root {
+  --main-color:#06d1ef;
+  --max-width: 800px;
+  --max-height: 800px;
+  --alpha: 0.97;
+  
+}
 
 /* Body styles */
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f1f8f8; /* Sand/beach color */
-  color: #43c6e7;
+  background-color: #06d1ef;; /* Sand/beach color */
+  color: var(--main-color);
   background-image: url('pexels-alexander-igrevsky-1862695.jpeg');
   background-size: cover;
   background-attachment: fixed;
 }
 
-
-/* Header styles */
-header {
-  background-color:  #43c6e7; /* Deep green */
-  color: #fff;
-  padding: 20px;
+header::after {
+  content: '';
+  position: absolute;
+  top: -0px;
+  left: 0;
+  width: 100%;
+  height: 150px; /* Adjust the height of the fading effect as needed */
+  background: linear-gradient(to top, rgba(6, 209, 239, 0.01) 0%, rgba(159, 156, 8, 0.7) 100%, rgba(6, 209, 239, 0.5) 100%);
+  pointer-events: none; /* Allow clicks to pass through this pseudo-element */
+  z-index: -1; /* Move the pseudo-element behind the header content */
 }
 
+/* Ensure the header content stays on top */
+header {
+  position: relative;
+  z-index: 1;
+  color: #fff; /* Adjust the text color to ensure visibility */
+}
+
+/* Additional styles for header text */
 header h1 {
+  top: 10px;
+  position: relative; /* Ensure header text stays on top of the pseudo-element */
+  z-index: 2; /* Make sure the text is on top */
   margin: 0;
   font-size: 2.5em;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  margin-left: 10px;
 }
 
 nav ul {
@@ -66,36 +89,126 @@ section {
 section h2 {
   font-size: 2.5em;
   margin-bottom: 20px;
-  color: #43c6e7; /* Deep green */
+  color: var(--main-color); /* Deep green */
 }
 
 /* About section styles */
 #about {
-  background-color: rgba(255, 255, 255, 0.95); /* Adjust the alpha value (0.8 for 80% opacity) */
-  padding: 40px;
+  background-color: rgba(255, 255, 255, var(--alpha)); /* Adjust the alpha value (0.8 for 80% opacity) */
+  padding: 20px;
   border-radius: 10px;
+  margin-top: 30px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
+  max-height: var(--max-height); /* Adjust the value as per your requirement */
+  margin: 20 auto; /* Center the element horizontally */
+  max-width: var(--max-width); /* Adjust the value as per your requirement */
+  margin-left: auto;
+  margin-right: auto;
+  overflow-y: auto;
 }
 
-/* Music section styles */
+
+
 #music {
-  background-color: rgba(255, 255, 255, 0.95); /* Adjust the alpha value (0.8 for 80% opacity) */
-  padding: 40px;
+  background-color: rgba(255, 255, 255, var(--alpha));
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  max-height: var(--max-height); /* Adjust the value as per your requirement */
+  margin: 20px auto; /* Center the element horizontally */
+  max-width: var(--max-width); /* Adjust the value as per your requirement */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.music-header {
+  padding-bottom: 10px; /* Adjust as needed for spacing */
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.music-content {
+  overflow-y: auto;
+  padding-top: 10px; /* Adjust as needed for spacing */
+  position: relative;
 }
 
 /* Contact section styles */
 #contact {
-  background-color: rgba(255, 255, 255, 0.95); /* Adjust the alpha value (0.8 for 80% opacity) */
-  padding: 40px;
+  background-color: rgba(255, 255, 255, var(--alpha)); /* Adjust the alpha value (0.8 for 80% opacity) */
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
+  max-height: var(--max-height); /* Adjust the value as per your requirement */
+  margin: 20 auto; /* Center the element horizontally */
+  max-width: var(--max-width); /* Adjust the value as per your requirement */
+  margin-left: auto;
+  margin-right: auto;
+  overflow-y: auto;
 }
+
+#gigs {
+  background-color: rgba(255, 255, 255, var(--alpha));
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  max-height: var(--max-height); /* Adjust the value as per your requirement */
+  margin: 20px auto; /* Center the element horizontally */
+  max-width: var(--max-width); /* Adjust the value as per your requirement */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.gigs-header {
+  padding-bottom: 10px; /* Adjust as needed for spacing */
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.gigs-content {
+  overflow-y: auto;
+  padding-top: 10px; /* Adjust as needed for spacing */
+  position: relative;
+}
+
+
+#linktree {
+  background-color: rgba(255, 255, 255, var(--alpha));
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  max-height: var(--max-height); /* Adjust the value as per your requirement */
+  margin: 20px auto; /* Center the element horizontally */
+  max-width: var(--max-width); /* Adjust the value as per your requirement */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.linktree-header {
+  padding-bottom: 10px; /* Adjust as needed for spacing */
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.linktree-content {
+  overflow-y: auto;
+  padding-top: 10px; /* Adjust as needed for spacing */
+  position: relative;
+}
+
+
 
 /* Footer styles */
 footer {
-  background-color: #43c6e7; /* Deep green */
+  background-color: var(--main-color); /* Deep green */
   color: #fff;
   padding: 20px 0;
   text-align: center;
@@ -139,7 +252,7 @@ footer p {
 .playback-controls button {
   padding: 8px 15px;
   font-size: 1em;
-  background-color: #43c6e7; /* Dark green */
+  background-color: var(--main-color); /* Dark green */
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -148,5 +261,66 @@ footer p {
 }
 
 .playback-controls button:hover {
-  background-color: #43c6e7; /* Lighter green on hover */
+  background-color: var(--main-color); /* Lighter green on hover */
+}
+
+
+/* Link Tree styles */
+.link-tree {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.link-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Individual Link styles */
+.link-card {
+  background-color: rgba(255, 255, 255, var(--alpha));
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  flex: 0 0 calc(50% - 20px); /* Two links per row with a gap of 20px */
+  max-width: calc(50% - 20px);
+  margin-bottom: 20px;
+}
+
+.link-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px 15px 0 0; /* Rounded corners for the top of the image */
+}
+
+.link-card p {
+  padding: 15px;
+  margin: 0;
+  color: var(--main-color);
+  font-size: 1.1em;
+}
+
+
+.link-card a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  width: 40%;
+  margin: auto;
+  margin-top: 10px; /* Add margin to separate from the description */
+  margin-bottom: 10px;
+  background-color: var(--main-color);
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 15px;
+  font-size: 16px;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.link-card a:hover {
+  background-color: #005d72; /* Darker shade on hover */
 }

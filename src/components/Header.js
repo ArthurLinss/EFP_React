@@ -12,6 +12,8 @@ const Header = () => {
           <li><a href="#about">About</a></li>
           <li><a href="#music">Music</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="#gigs">Gigs</a></li>
+          <li><a href="#linktree">Links</a></li>
         </ul>
       </nav>
     </header>
