@@ -8,6 +8,7 @@ const Footer = () => {
       {/* Footer content */}
       <p>&copy; 2023 Exit From Paradise. All rights reserved.</p>
       <p> Website powered by Werrasoft.</p>
+      <p> Background image &copy; Alexander Igrevsky </p>
     </footer>
   );
 }
