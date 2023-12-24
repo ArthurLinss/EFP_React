@@ -1,38 +1,152 @@
-.App {
+/* App.css */
+
+/* Body styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f8f8; /* Sand/beach color */
+  color: #43c6e7;
+  background-image: url('pexels-alexander-igrevsky-1862695.jpeg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+/* Header styles */
+header {
+  background-color:  #43c6e7; /* Deep green */
+  color: #fff;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 15px;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+/* Style anchor links inside navigation */
+nav a {
+  text-decoration: none; /* Remove underline */
+  color: #fff; /* Text color */
+  transition: color 0.3s ease-in-out; /* Smooth color transition */
+}
+
+nav a:hover {
+  color: #ffcc00; /* Change color on hover */
+}
+
+/* Main section styles */
+main {
+  padding: 20px;
+}
+
+section {
+  margin: 40px 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+section h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #43c6e7; /* Deep green */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* About section styles */
+#about {
+  background-color: rgba(255, 255, 255, 0.95); /* Adjust the alpha value (0.8 for 80% opacity) */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Music section styles */
+#music {
+  background-color: rgba(255, 255, 255, 0.95); /* Adjust the alpha value (0.8 for 80% opacity) */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact section styles */
+#contact {
+  background-color: rgba(255, 255, 255, 0.95); /* Adjust the alpha value (0.8 for 80% opacity) */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styles */
+footer {
+  background-color: #43c6e7; /* Deep green */
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+footer p {
+  margin: 0;
+}
+
+
+
+
+
+
+.music-track {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.music-track h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #43c6e7; /* Dark green */
+}
+
+.music-track audio {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.playback-controls {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.playback-controls button {
+  padding: 8px 15px;
+  font-size: 1em;
+  background-color: #43c6e7; /* Dark green */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.playback-controls button:hover {
+  background-color: #43c6e7; /* Lighter green on hover */
 }
